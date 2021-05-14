@@ -3,7 +3,7 @@ def Add(a, b):
         
 def SayHello():
         print("Hello World - from Yen")
-        print('New message')
+        print('Happy Friday)
 
 if __name__ == '__main__':
         SayHello()
