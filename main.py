@@ -2,8 +2,7 @@ def Add(a, b):
         return a + b
         
 def SayHello():
-        print("Hello World - from Yen")
-        print('Happy Friday")
+        print("Hello World - From Yen")
 
 if __name__ == '__main__':
         SayHello()
