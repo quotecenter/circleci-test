@@ -10,14 +10,14 @@ jobs:
       - run:
         name: Creating Dummy Artifacts
         command: |
-          echo "my artifact file" > /circleci-python/artifact-1;
-          mkdir /circleci-python/artifacts;
-          echo "my artifact files in a dir" > /circleci-python/artifacts/artifact-2;
+          echo "my artifact file" > ~/circleci-python/artifact-1;
+          mkdir ~/circleci-python/artifacts;
+          echo "my artifact files in a dir" > ~/circleci-python/artifacts/artifact-2;
       - store_artifacts:
-        path: /circleci-python/artifact-1;
+        path: ~/circleci-python/artifact-1;
         destination: artifact-file
       - store_artifacts:
-        path: /circleci-python/artifacts
+        path: ~/circleci-python/artifacts
       - run: python3 main.py
   test:
     working_directory: ~/circleci-pythongit 
