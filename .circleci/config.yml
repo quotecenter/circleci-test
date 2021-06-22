@@ -8,16 +8,19 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Creating Dummy Artifacts
+          name: Build Whl package
           command: |
-            echo "my artifact file" > ~/circleci-python/artifact-1;
-            mkdir ~/circleci-python/artifacts;
-            echo "my artifact files in a dir" > ~/circleci-python/artifacts/artifact-2;
-      - store_artifacts:
-            path: ~/circleci-python/artifact-1
-      - store_artifacts:
-          path: ~/circleci-python/artifacts
-      - run: python3 main.py
+            python3 -m pip install --upgrade build   
+            python3 -m pip install --upgrade pip setuptools wheel
+            python3 -m build 
+          #echo "my artifact file" > ~/circleci-python/artifact-1;
+          #mkdir ~/circleci-python/artifacts;
+          #echo "my artifact files in a dir" > ~/circleci-python/artifacts/artifact-2;
+      #- store_artifacts:
+      #      path: ~/circleci-python/artifact-1
+      #- store_artifacts:
+      #    path: ~/circleci-python/artifacts
+      #- run: python3 main.py
   test:
     working_directory: ~/circleci-pythongit 
     docker:
