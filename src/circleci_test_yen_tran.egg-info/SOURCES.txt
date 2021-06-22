@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/circleci_test_yen_tran.egg-info/PKG-INFO
+src/circleci_test_yen_tran.egg-info/SOURCES.txt
+src/circleci_test_yen_tran.egg-info/dependency_links.txt
+src/circleci_test_yen_tran.egg-info/top_level.txt

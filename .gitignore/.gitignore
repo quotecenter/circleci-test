@@ -1,2 +1,4 @@
 .DS_Store
 Sandpit/*
+dist/*
+circleci_test_env/*
