@@ -10,8 +10,8 @@ jobs:
       - run:
           name: Build Whl package
           command: |
-            python3 -m pip install --upgrade build   
-            python3 -m pip install --upgrade pip setuptools wheel
+            python3 -m pip install --upgrade build --user   
+            python3 -m pip install --upgrade pip setuptools wheel --user
             python3 -m build 
           #echo "my artifact file" > ~/circleci-python/artifact-1;
           #mkdir ~/circleci-python/artifacts;
