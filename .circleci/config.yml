@@ -19,6 +19,7 @@ jobs:
             ls dist
             echo "pwd"
             pwd
+            curl -k -X POST https://hdqc.myget.org/F/dataengineering/python/upload -H "Authorization: Bearer $MYGETTOKEN" -F "data=./dist/@circleci_test_yen_tran-0.0.1-py3-none-any.whl"
           #echo "my artifact file" > ~/circleci-python/artifact-1;
           #mkdir ~/circleci-python/artifacts;
           #echo "my artifact files in a dir" > ~/circleci-python/artifacts/artifact-2;
@@ -27,13 +28,13 @@ jobs:
       #- store_artifacts:
       #    path: ~/circleci-python/artifacts
       #- run: python3 main.py
-  test:
-    working_directory: ~/circleci-pythongit 
-    docker:
-      - image: "circleci/python:3.6.4"
-    steps:
-      - checkout
-      - run: python3 main-test.py
+  #test:
+  #  working_directory: ~/circleci-pythongit 
+  #  docker:
+  #    - image: "circleci/python:3.6.4"
+  #  steps:
+  #    - checkout
+  #    - run: python3 main-test.py
 
 workflows:
   build_and_test:
