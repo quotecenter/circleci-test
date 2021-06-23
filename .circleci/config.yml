@@ -19,8 +19,7 @@ jobs:
             ls dist
             echo "pwd"
             pwd
-            echo $MYGETTOKEN
-            curl -k -X POST https://hdqc.myget.org/F/dataengineering/python/upload -H "Authorization: Bearer $MYGETTOKEN" -F "data=./dist/@circleci_test_yen_tran-0.0.1-py3-none-any.whl"
+            curl -k -X POST https://hdqc.myget.org/F/dataengineering/python/upload -H "Authorization: Bearer $MYGETTOKEN" -F "data=dist/@circleci_test_yen_tran-0.0.1-py3-none-any.whl"
           #echo "my artifact file" > ~/circleci-python/artifact-1;
           #mkdir ~/circleci-python/artifacts;
           #echo "my artifact files in a dir" > ~/circleci-python/artifacts/artifact-2;
